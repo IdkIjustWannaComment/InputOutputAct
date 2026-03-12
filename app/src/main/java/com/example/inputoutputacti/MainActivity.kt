@@ -13,10 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnClickMe = findViewById<Button>(R.btnClickMe)
-
+        //toast to ensure the button works
         btnClickMe?.setOnClickListener {
             Toast.makeText(this@MainActivity,"Button Clicked",Toast.LENGTH_LONG).Show()
         }
+            Welcome.txt.Text = "Welcome ${nameTxtField.text}"
+            //welcome text = "welcome + nameTxtField
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
