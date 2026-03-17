@@ -22,15 +22,20 @@ class MainActivity : AppCompatActivity() {
         val edtNameInput = findViewById<EditText>(R.id.edtNameInput)
         val txtHello = findViewById<TextView>(R.id.txtHello)
 
-        var greeting: String
+
 
         //toast to ensure the button works
         btnClickMe?.setOnClickListener {
             var greeting: String
             if (zuluSwitch.isChecked) {
                 greeting = "Sawubona, ${edtNameInput.text}"
-            } else { greeting = "Greetings, ${edtNameInput.text}"}
-
+            } else {
+                if (edtNameInput.text.toString() == "Sam") {
+                    greeting = "Yo, ${edtNameInput.text}"
+                } else {
+                    greeting = "Greetings, ${edtNameInput.text}"
+                }
+            }
             //Toast.makeText(this@MainActivity,"Button Clicked",Toast.LENGTH_LONG).show()
             txtHello.text = greeting //welcome text = "welcome + edtNameInput"
         }
