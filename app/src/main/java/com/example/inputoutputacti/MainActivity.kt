@@ -9,6 +9,7 @@ import android.widget.Toast
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Switch
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,16 +17,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
+        val zuluSwitch = findViewById<Switch>(R.id.zuluSwitch)
         val btnClickMe = findViewById<Button>(R.id.btnClickMe)
         val edtNameInput = findViewById<EditText>(R.id.edtNameInput)
         val txtHello = findViewById<TextView>(R.id.txtHello)
+
+        var greeting: String
+
         //toast to ensure the button works
         btnClickMe?.setOnClickListener {
-            Toast.makeText(this@MainActivity,"Button Clicked",Toast.LENGTH_LONG).show()
+            var greeting: String
+            if (zuluSwitch.isChecked) {
+                greeting = "Sawubona, ${edtNameInput.text}"
+            } else { greeting = "Greetings, ${edtNameInput.text}"}
+
+            //Toast.makeText(this@MainActivity,"Button Clicked",Toast.LENGTH_LONG).show()
+            txtHello.text = greeting //welcome text = "welcome + edtNameInput"
         }
-            txtHello.text = "Welcome, ${edtNameInput.text}!"
-            //welcome text = "welcome + edtNameInput"
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
