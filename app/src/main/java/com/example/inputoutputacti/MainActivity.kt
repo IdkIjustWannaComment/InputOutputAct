@@ -24,14 +24,16 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         //toast to ensure the button works
         btnClickMe?.setOnClickListener {
             var greeting: String
             var zulu = zuluSwitch.isChecked
+            var age = 67
             if (zulu) {
                 greeting = "Sawubona, ${edtNameInput.text}"
             } else {
-                if (edtNameInput.text.toString() == "Sam" || edtNameInput.text.toString() == "Samantha") {
+                if ((edtNameInput.text.toString() == "Sam" || edtNameInput.text.toString() == "Samantha") && age >20) {
                     greeting = "Yo, ${edtNameInput.text}"
                 } else {
                     greeting = "Greetings, ${edtNameInput.text}"
