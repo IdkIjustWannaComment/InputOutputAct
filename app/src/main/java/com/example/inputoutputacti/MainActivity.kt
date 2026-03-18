@@ -27,10 +27,11 @@ class MainActivity : AppCompatActivity() {
         //toast to ensure the button works
         btnClickMe?.setOnClickListener {
             var greeting: String
-            if (zuluSwitch.isChecked) {
+            var zulu = zuluSwitch.isChecked
+            if (zulu) {
                 greeting = "Sawubona, ${edtNameInput.text}"
             } else {
-                if (edtNameInput.text.toString() == "Sam") {
+                if (edtNameInput.text.toString() == "Sam" || edtNameInput.text.toString() == "Samantha") {
                     greeting = "Yo, ${edtNameInput.text}"
                 } else {
                     greeting = "Greetings, ${edtNameInput.text}"
