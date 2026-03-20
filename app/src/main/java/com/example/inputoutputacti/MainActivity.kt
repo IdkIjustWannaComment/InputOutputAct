@@ -13,35 +13,49 @@ import android.widget.Switch
 
 
 class MainActivity : AppCompatActivity() {
+
+    enum class Languages {
+        ENGLISH,
+        NOBELE,
+        PEDI,
+        SOTHO,
+        SWATI,
+        TSONGA,
+        TSWANA,
+        VENDA,
+        XHOSA,
+        ZULU,
+        AFRIKAANS
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val zuluSwitch = findViewById<Switch>(R.id.zuluSwitch)
-        val btnClickMe = findViewById<Button>(R.id.btnClickMe)
-        val edtNameInput = findViewById<EditText>(R.id.edtNameInput)
-        val txtHello = findViewById<TextView>(R.id.txtHello)
-
-
-
-
-        //toast to ensure the button works
-        btnClickMe?.setOnClickListener {
-            var greeting: String
-            var zulu = zuluSwitch.isChecked
-            var age = 67
-            if (zulu) {
-                greeting = "Sawubona, ${edtNameInput.text}"
-            } else {
-                if ((edtNameInput.text.toString() == "Sam" || edtNameInput.text.toString() == "Samantha") && age >20) {
-                    greeting = "Yo, ${edtNameInput.text}"
-                } else {
-                    greeting = "Greetings, ${edtNameInput.text}"
-                }
-            }
-            //Toast.makeText(this@MainActivity,"Button Clicked",Toast.LENGTH_LONG).show()
-            txtHello.text = greeting //welcome text = "welcome + edtNameInput"
-        }
+//        val zuluSwitch = findViewById<Switch>(R.id.zuluSwitch)
+//        val btnClickMe = findViewById<Button>(R.id.btnClickMe)
+//        val edtNameInput = findViewById<EditText>(R.id.edtNameInput)
+//        val txtHello = findViewById<TextView>(R.id.txtHello)
+//
+//
+//
+//
+//        //toast to ensure the button works
+//        btnClickMe?.setOnClickListener {
+//            var greeting: String
+//            var zulu = zuluSwitch.isChecked
+//            var age = 67
+//            if (zulu) {
+//                greeting = "Sawubona, ${edtNameInput.text}"
+//            } else {
+//                if ((edtNameInput.text.toString() == "Sam" || edtNameInput.text.toString() == "Samantha") && age >20) {
+//                    greeting = "Yo, ${edtNameInput.text}"
+//                } else {
+//                    greeting = "Greetings, ${edtNameInput.text}"
+//                }
+//            }
+//            //Toast.makeText(this@MainActivity,"Button Clicked",Toast.LENGTH_LONG).show()
+//            txtHello.text = greeting //welcome text = "welcome + edtNameInput"
+//        }
 
 
 
