@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Switch
+import android.widget.Spinner
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,10 +32,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-//        val zuluSwitch = findViewById<Switch>(R.id.zuluSwitch)
-//        val btnClickMe = findViewById<Button>(R.id.btnClickMe)
-//        val edtNameInput = findViewById<EditText>(R.id.edtNameInput)
-//        val txtHello = findViewById<TextView>(R.id.txtHello)
+
+
+        val zuluSwitch = findViewById<Switch>(R.id.zuluSwitch)
+        val btnClickMe = findViewById<Button>(R.id.btnClickMe)
+        val edtNameInput = findViewById<EditText>(R.id.edtNameInput)
+        val txtHello = findViewById<TextView>(R.id.txtHello)
+        val langSpin = findViewById<Spinner>(R.id.langSpin)
+
+
 //
 //
 //
